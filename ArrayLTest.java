@@ -20,7 +20,7 @@ public class ArrayLTest {
         //list.remove(3);
         System.out.println(list);
         System.out.println(list.get(0));
-        
+
 
         //мжоно работать с экземплярами класса добавляя (экземплКласса) в add()
         //можно удалять командой .remove

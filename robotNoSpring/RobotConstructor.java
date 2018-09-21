@@ -22,10 +22,6 @@ public class RobotConstructor {
         robot=new Robot(head,hand,leg);
   }
 
-  public  void action(){
-      head.thinking();
-      hand.catchSomething();
-      leg.going();
-  }
+
 
 }

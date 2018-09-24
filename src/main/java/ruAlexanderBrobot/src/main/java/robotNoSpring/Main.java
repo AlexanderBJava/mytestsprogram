@@ -1,4 +1,4 @@
-package robotNoSpring;
+package ruAlexanderBrobot.src.main.java.robotNoSpring;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

@@ -1,4 +1,4 @@
-package robotNoSpring;
+package ruAlexanderBrobot.src.main.java.robotNoSpring;
 
 import robotNoSpring.details.SonyHand;
 import robotNoSpring.details.SonyLegs;

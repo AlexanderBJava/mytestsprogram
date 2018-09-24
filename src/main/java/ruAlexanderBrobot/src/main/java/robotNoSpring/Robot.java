@@ -1,4 +1,4 @@
-package robotNoSpring;
+package ruAlexanderBrobot.src.main.java.robotNoSpring;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;

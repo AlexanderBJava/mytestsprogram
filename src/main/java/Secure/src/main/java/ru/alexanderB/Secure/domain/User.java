@@ -1,24 +1,25 @@
 package ru.alexanderB.Secure.domain;
 
-
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import java.time.LocalDateTime;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
-@Table (name = "usr")
+@Table(name="usr")
 @Data
 public class User {
     @Id
-    private String id;
-    private String name;
-    private String email;
-    private String gender;
-    private String locale;
-    private String userpic;
-    private LocalDateTime lastVisit;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String username;
+    private String password;
+    private boolean active;
+
+    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
+    @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
+    @Enumerated(EnumType.STRING)
+    private Set<Role> roles;
+
 
 }

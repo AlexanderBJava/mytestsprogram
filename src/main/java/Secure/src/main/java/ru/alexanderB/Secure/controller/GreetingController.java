@@ -11,21 +11,33 @@ import java.util.Map;
 @Controller
 public class GreetingController {
 
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="my friend") String name, Map<String, Object> model) {
-        model.put("name", name);
+    @GetMapping ("/")
+    public String greeting( Map<String, Object> model) {
+       // model.put("name", name);
         return "greeting";
+    }
+
+    @GetMapping ("/google")
+    public String google( Map<String, Object> model) {
+        // model.put("name", name);
+        return "google";
+    }
+
+//      @GetMapping("/login")
+//    public String login( Map<String, Object> model) {
+//        model.put("someInLogin", "Its Login page!");
+//        return "login";
+//    }
+
+    @GetMapping ("/main")
+    public String main( Map<String, Object> model) {
+        model.put("someInMain", "Hello Everyone!");
+        return "main";
     }
 
     @GetMapping("/error")
     public String error(@RequestParam(name="name", required=false, defaultValue=".") String name, Model model) {
         model.addAttribute("name", name);
         return "error";
-    }
-
-    @GetMapping
-    public String main( Map<String, Object> model) {
-        model.put("someInMain", "Hello Everyone!");
-        return "main";
     }
 }
